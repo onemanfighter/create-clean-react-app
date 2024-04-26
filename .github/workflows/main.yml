@@ -1,21 +1,27 @@
-name: Publish job
+name: Build
 
 on:
   push:
-    branches: main
+    branches: ['main']
+  pull_request:
+    branches: ['main']
 
 jobs:
-  publish_npm:
+  build_test_lint:
     runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [16.x]
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v2
-        with:
-          node-version: '16'
-      - run: yarn install
+      - uses: actions/checkout@v3
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v3
+      - name: Install Dependencies
+        run: yarn install
+      - name: Build
+        run: yarn build --if-present
+      - name: Linting
+        run: yarn lint
       - name: Test
         run: yarn test
-      - uses: JS-DevTools/npm-publish@v3
-        with:
-          token: ${{ secrets.NPM_AUTH_TOKEN }}
-          access: public
