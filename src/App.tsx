@@ -1,12 +1,12 @@
-import React from "react";
+import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 function App() {
+  const { t } = useTranslation();
   return (
-    <div className="App">
-      <header className="App-header">
-        Basic React App boilerplate project
-      </header>
-    </div>
+    <React.StrictMode>
+      <div>{t('App')}</div>
+    </React.StrictMode>
   );
 }
 
