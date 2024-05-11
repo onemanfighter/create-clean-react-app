@@ -15,6 +15,7 @@ This is a boilerplate project for a react-js project. It includes the following:
 - Tailwindcss
 - i18next
 - module resolver
+- Github action | Build, Lint, Test job | FTP deploy job |
 
 ## Getting started
 
