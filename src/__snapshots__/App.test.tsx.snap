@@ -2,6 +2,8 @@
 
 exports[`renders learn react link 1`] = `
 <div>
-  App made by Amit
+  <div>
+    App made by Amit
+  </div>
 </div>
 `;
