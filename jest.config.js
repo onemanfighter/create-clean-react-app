@@ -8,7 +8,17 @@ module.exports = {
   setupFilesAfterEnv: ['<rootDir>/jest.js'],
   roots: ['./'],
   testEnvironment: 'jsdom',
-  collectCoverageFrom: ['src/*.tsx', 'src/**/*.tsx'],
+  collectCoverageFrom: [
+    'src/**/*.ts',
+    'src/**/*.tsx',
+    // exclude files from coverage
+    '!src/**/index.ts',
+    '!src/**/index.tsx',
+    '!src/**/App.tsx',
+    '!src/**/react-app-env.d.ts',
+    '!src/**/reportWebVitals.ts',
+    '!src/**/setupTests.ts',
+  ],
   moduleFileExtensions: ['js', 'jsx', 'ts', 'tsx'],
   moduleDirectories: ['node_modules', 'src'],
   moduleNameMapper: {
