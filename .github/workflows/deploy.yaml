@@ -1,11 +1,13 @@
-name: Deploy job
+name: Build
 
 on:
   push:
-    branches: ['production']
+    branches: ['development']
+  pull_request:
+    branches: ['development', 'production']
 
 jobs:
-  setup_and_deploy:
+  build_test_lint:
     runs-on: ubuntu-latest
     strategy:
       matrix:
@@ -18,11 +20,11 @@ jobs:
         run: yarn install
       - name: Build
         run: yarn build --if-present
-      # - name: 📂 Sync files
-      # uses: SamKirkland/FTP-Deploy-Action@v4.3.5
-      # with:
-      #   server: ftp.telegramonic.com
-      #   username: u392139545.github_deploy
-      #   password: ${{ secrets.HOSTINGER_FTP_PASSWORD }}
-      #   local-dir: ./build/
-      #   server-dir: ./
+      - name: Linting
+        run: yarn lint
+      - name: Test
+        run: yarn test:cov
+      - name: Upload coverage reports to Codecov
+        uses: codecov/codecov-action@v4.0.1
+        with:
+          token: ${{ secrets.CODECOV_TOKEN }}
