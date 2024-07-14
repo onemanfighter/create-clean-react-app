@@ -1,13 +1,11 @@
-name: Build
+name: Deploy job
 
 on:
-  push:
-    branches: ['development']
-  pull_request:
-    branches: ['development', 'production']
+  release:
+    types: [published]
 
 jobs:
-  build_test_lint:
+  setup_and_deploy:
     runs-on: ubuntu-latest
     strategy:
       matrix:
@@ -20,11 +18,11 @@ jobs:
         run: yarn install
       - name: Build
         run: yarn build --if-present
-      - name: Linting
-        run: yarn lint
-      - name: Test
-        run: yarn test:cov
-      - name: Upload coverage reports to Codecov
-        uses: codecov/codecov-action@v4.0.1
+      - name: 📂 Sync files
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
-          token: ${{ secrets.CODECOV_TOKEN }}
+          server: ${{ secrets.HOURCODING_MAIN_FTP_SERVER }}
+          username: ${{ secrets.HOURCODING_MAIN_FTP_ACCOUNT }}
+          password: ${{ secrets.HOURCODING_MAIN_FTP_PASSWORD }}
+          local-dir: ./build/
+          server-dir: ./
