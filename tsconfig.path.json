@@ -2,10 +2,11 @@
   "compilerOptions": {
     "baseUrl": "./",
     "paths": {
+      "@components": ["src/components"],
+      "@providers": ["src/providers"],
       "@localization": ["src/localization"],
-      "@store": ["src/store"],
-      "@store/slice": ["src/store/slice"],
-      "@selectors": ["src/store/selectors"]
+      "@uiStore": ["src/store/ui"],
+      "@appStore": ["src/store/app"]
     }
   }
 }
