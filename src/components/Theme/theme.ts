@@ -1,4 +1,4 @@
-import { ThemeConfig, extendBaseTheme } from '@chakra-ui/react';
+import { ThemeConfig, extendTheme } from '@chakra-ui/react';
 import colors from './colors';
 import { fontSize, fontWeight, lineHeight, zIndices } from './fonts';
 
@@ -17,6 +17,6 @@ const themeData = {
   zIndices: { ...zIndices },
 };
 
-const theme = extendBaseTheme(themeData);
+const theme = extendTheme(themeData);
 
 export default theme;
