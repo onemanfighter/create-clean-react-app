@@ -11,7 +11,7 @@ exports[`Host should render correctly 1`] = `
       <p
         class="chakra-text css-xi606m"
       >
-        © 2024 Hourcoding.com | All rights reserved
+        © 2024 Template-boilerplate | All rights reserved
       </p>
     </div>
   </div>
