@@ -1,3 +1,5 @@
 {
-  "App": "App made by Amit"
+  "Footer": {
+    "copyrightText": "© {{year}} Hourcoding.com | All rights reserved"
+  }
 }

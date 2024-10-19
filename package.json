@@ -1,7 +1,7 @@
 {
-  "name": "create-clean-react-app",
-  "version": "0.1.0",
-  "description": "Boilerplate code repository for creating react app",
+  "name": "template-boilerplate",
+  "description": "Template-boilerplate",
+  "version": "0.0.1",
   "main": "index.tsx",
   "scripts": {
     "start": "craco start",
@@ -26,44 +26,33 @@
     "@chakra-ui/react": "^2.8.2",
     "@emotion/react": "^11.11.4",
     "@emotion/styled": "^11.11.5",
+    "@fontsource-variable/karla": "^5.0.22",
+    "@fontsource/bungee-shade": "^5.0.22",
+    "@supabase/supabase-js": "^2.45.1",
     "@tanstack/react-query": "^5.51.23",
     "@tanstack/react-query-devtools": "^5.51.23",
     "@types/node": "^16.18.91",
     "@types/react": "^18.2.69",
     "@types/react-dom": "^18.2.22",
+    "@uiw/react-markdown-preview": "^5.1.3",
     "framer-motion": "^11.3.2",
     "i18next": "^23.11.2",
     "i18next-browser-languagedetector": "^7.2.1",
     "immer": "^10.0.4",
     "lodash": "^4.17.21",
+    "npm": "^10.8.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-helmet-async": "^2.0.5",
     "react-i18next": "^14.1.1",
+    "react-router-dom": "^6.26.1",
     "react-scripts": "5.0.1",
     "typescript": "^4.9.5",
     "web-vitals": "^2.1.4",
     "zustand": "^4.5.2"
   },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  },
   "devDependencies": {
-    "@babel/core": "^7.24.5",
+    "@babel/core": "^7.24.8",
     "@babel/preset-env": "^7.24.4",
     "@babel/preset-react": "^7.24.1",
     "@babel/preset-typescript": "^7.24.1",
@@ -93,17 +82,25 @@
     "react-test-renderer": "^18.3.0",
     "ts-jest": "^29.1.2"
   },
-  "repository": "git@github.com:onemanfighter/amitraikwar.git",
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "repository": "git@github.com:onemanfighter/hourcoding-tools.git",
   "author": "Amit Raikwar",
-  "license": "MIT",
-  "jest": {
-    "collectCoverage": true,
-    "coverageReporters": [
-      "lcov"
-    ],
-    "collectCoverageFrom": [
-      "src/**/*.ts*"
-    ],
-    "coverageDirectory": "./"
-  }
+  "license": "MIT"
 }

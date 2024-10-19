@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Host should render correctly 1`] = `
+<div>
+  <div
+    class="css-vooagt"
+  >
+    <div
+      class="css-o5g2qp"
+    >
+      <p
+        class="chakra-text css-xi606m"
+      >
+        © 2024 Hourcoding.com | All rights reserved
+      </p>
+    </div>
+  </div>
+</div>
+`;
