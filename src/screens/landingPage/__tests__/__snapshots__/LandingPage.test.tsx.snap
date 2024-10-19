@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LandingPage should render correctly 1`] = `
+<div>
+  <div
+    class="css-1wgbimk"
+  >
+    <div>
+      <title>
+        Hourcoding | Tools
+      </title>
+    </div>
+  </div>
+</div>
+`;

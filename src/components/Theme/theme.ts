@@ -1,9 +1,16 @@
 import { ThemeConfig, extendTheme } from '@chakra-ui/react';
 import colors from './colors';
-import { fontSize, fontWeight, lineHeight, zIndices } from './fonts';
+import {
+  breakpoints,
+  fontSize,
+  fontWeight,
+  lineHeight,
+  zIndices,
+} from './fonts';
+import '@fontsource/bungee-shade';
 
 const config: ThemeConfig = {
-  initialColorMode: 'light',
+  initialColorMode: 'dark',
   useSystemColorMode: true,
   disableTransitionOnChange: false,
 };
@@ -11,6 +18,11 @@ const config: ThemeConfig = {
 const themeData = {
   config: { ...config },
   colors: { ...colors },
+  breakpoints: { ...breakpoints },
+  fonts: {
+    heading: `'Bungee Shade', sans-serif`,
+    body: `'Karla Variable', sans-serif`,
+  },
   fontSizes: { ...fontSize },
   fontWeights: { ...fontWeight },
   lineHeights: { ...lineHeight },

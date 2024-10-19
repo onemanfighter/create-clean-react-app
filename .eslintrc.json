@@ -19,6 +19,7 @@
   "plugins": ["react", "@tanstack/query"],
   "rules": {
     "react/react-in-jsx-scope": "off",
+    "@tanstack/query/exhaustive-deps": "error",
     "no-unused-vars": "off",
     "no-undef": "off",
     "no-console": "warn",
@@ -34,8 +35,7 @@
     "@typescript-eslint/no-unused-vars": "error",
     "@typescript-eslint/no-non-null-assertion": "off",
     "@typescript-eslint/ban-types": "off",
-    "@typescript-eslint/no-var-requires": "off",
-    "@tanstack/query/exhaustive-deps": "error"
+    "@typescript-eslint/no-var-requires": "off"
   },
   "settings": {
     "react": {
